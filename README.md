@@ -95,3 +95,16 @@ See example_Dict.py to compare syntax of Dict class with standard practice.
 * [style guide](https://google.github.io/styleguide/pyguide.html)
 * [pytest](http://pytest.org/latest)
 * [coverage](https://coverage.readthedocs.io/en/coverage-4.0.3/)
+
+## TODO
+Makefile style recommendations include having an 
+[INSTALL rule](https://www.gnu.org/prep/standards/html_node/Command-Variables.html#Command-Variables).
+This is a good idea if you want a central source directory
+and a set of file system targets for distribution of a script.
+It prevents "forgetting a step" when re-initializing a system.
+
+It is also useful to have an 'uninstall' and 'clean'.
+
+Currently "Finalize" is used as "info" is intended.
+[info](https://www.gnu.org/prep/standards/html_node/Standard-Targets.html#Standard-Targets)
+This should be cleaned up.

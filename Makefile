@@ -19,7 +19,7 @@ all:	Initialize $(QCDICT) $(QCTEST) $(QCSHOW) Finalize
 
 # Delete non-sources ##########################################################
 .PHONY:
-clean:
+distclean clean:
 	@echo make $@
 	@rm -fr __pycache__ .cache htmlcov
 	@rm -fr artifact
