@@ -6,6 +6,19 @@
 Author: Jonathan D. Lettvin
 LinkedIn: jlettvin
 Date: 20141020
+
+This module implements the ability to substitute
+member names for explicit dictionary dereferences.
+
+    hard = {'hello': 'world', 'a': 'b'}
+    easy = Dict(**source)
+
+    assert easy.hello == hard['hello'], "This error never happens"
+    hard['hello'] = 'monde';
+    easy.hello    = 'monde'
+    assert easy.hello == hard['hello'], "This error never happens"
+
+See test_Dict.py to see the implemented methods and usage patterns available.
 """
 
 from types import (MethodType)
