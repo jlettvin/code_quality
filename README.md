@@ -1,4 +1,4 @@
-# Code Quality
+# Code Quality (repository under development)
 
 This is the README.md for the Code Quality repository
 using the python Dict library as a primary example of
