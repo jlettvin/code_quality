@@ -30,7 +30,7 @@ clean:
 tar:
 	@echo make $@ with timestamp $(DATETIME)
 	@mkdir -p tgz
-	@tar cvzf tgz/Dict.$(DATETIME).tgz $(SOURCE)
+	@tar cvzf tgz/Dict.$(DATETIME).tgz $(SOURCE) ScalableQuality.ppt
 
 # Makefile start/end report ###################################################
 .PHONY:
