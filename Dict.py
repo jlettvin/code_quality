@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 #   pep8 --ignore=E721 Dict.py
+# pragma pylint: disable=invalid-name
+# pragma pylint: disable=no-member
 
 """Dict.py
 Author: Jonathan D. Lettvin
@@ -79,3 +81,19 @@ class Dict(dict):
         "instance dictionary bulk method attacher"
         self.update({Dict._clean(k): self._method(v) for k, v in kw.items()})
         return self
+
+if __name__ == "__main__":
+
+    def main():
+        "Sample run."
+
+        harder = {'hello': 'world'}
+        easier = Dict(**harder)
+
+        try:
+            assert easier.hello == harder["hello"]
+            print '[PASS] ' + __file__ + ' Sample worked'
+        except AssertionError:
+            print '[FAIL] ' + __file__ + ' Sample failed'
+
+    main()

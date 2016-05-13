@@ -15,6 +15,7 @@ RCLINT=$(DICT).pylint.rc $(TEST).pylint.rc $(SHOW).pylint.rc
 
 # main ########################################################################
 all:	Initialize $(QCDICT) $(QCTEST) $(QCSHOW) Finalize
+	./$(DICT).py
 
 # Delete non-sources ##########################################################
 .PHONY:
