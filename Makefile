@@ -1,7 +1,5 @@
 #!/usr/bin/env make
 
-# TODO store artifacts in the artifact directory.
-
 DATETIME=`date +%Y%m%d%H%M%S`
 
 DICT=Dict
