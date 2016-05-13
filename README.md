@@ -89,8 +89,8 @@ See example_Dict.py to compare syntax of Dict class with standard practice.
 * tgz                       Directory containing local backups
 
 ## Useful linke
-[https://www.python.org/dev/peps/pep-0008/ PEP8]
-[https://www.python.org/dev/peps/pep-0020/ PEP20]
-[https://google.github.io/styleguide/pyguide.html Style Guide]
-[http://pytest.org/latest pytest]
-[https://coverage.readthedocs.io/en/coverage-4.0.3/ coverage]
+* [https://www.python.org/dev/peps/pep-0008/ PEP8]
+* [https://www.python.org/dev/peps/pep-0020/ PEP20]
+* [https://google.github.io/styleguide/pyguide.html Style Guide]
+* [http://pytest.org/latest pytest]
+* [https://coverage.readthedocs.io/en/coverage-4.0.3/ coverage]
