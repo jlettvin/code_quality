@@ -24,7 +24,8 @@ Makefile output shows the progress and quality metrics.
 * code passes pep8, pylint, and pyflakes at 100% compliance (with disables).
 * code is designed to be very readable.
 * code uses visual cue comments to aid navigating the source code.
-* comments carefully document a non-obvious concept.
+* comments carefully document non-obvious concepts.
+* comments carefully document variations from accepted practice.
 * code uses docopt to make command-line processing simple and readable.
 * code uses docstrings everywhere for both compliance and understanding.
 * test follows the Agile principle of write-your-own test-suite.
