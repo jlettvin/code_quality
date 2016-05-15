@@ -15,7 +15,7 @@ RCLINT=$(DICT).pylint.rc $(TEST).pylint.rc $(SHOW).pylint.rc
 
 # main ########################################################################
 all:	Initialize $(QCDICT) $(QCTEST) $(QCSHOW) Finalize
-	./$(DICT).py
+	@./$(DICT).py > /dev/null
 
 # Delete non-sources ##########################################################
 .PHONY:
@@ -35,12 +35,21 @@ tar:
 .PHONY:
 Initialize: $(DICT).py $(TEST).py $(SHOW).py
 	@echo "Starting Code Quality tests on the Dict suite."
-	mkdir -p artifact
+	@mkdir -p artifact
 
 .PHONY:
 Finalize:
 	@echo "\tmake .coverage from $(TEST).py using coverage"
-	@coverage run --source=$(TEST).py,$(DICT).py $(TEST).py -crg
+	@coverage run --source=$(TEST).py,$(DICT).py \
+		$(TEST).py -crg --verbose > /dev/null
+	@coverage run --source=$(TEST).py,$(DICT).py --append \
+		$(TEST).py -crg --coverage > /dev/null
+	@coverage run --source=$(TEST).py,$(DICT).py --append \
+		$(TEST).py -crg > /dev/null
+	@coverage run --source=$(DICT).py 			 --append \
+		$(DICT).py > /dev/null
+	@coverage run --source=$(DICT).py 			 --append \
+		$(DICT).py fail > /dev/null
 	@coverage html
 	@echo "\tmake pydoc from $(DICT) and $(TEST).py using coverage"
 	@pydoc -w $(DICT) > $(DICT).html

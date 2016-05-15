@@ -3,6 +3,7 @@
 #   pep8 --ignore=E721 Dict.py
 # pragma pylint: disable=invalid-name
 # pragma pylint: disable=no-member
+# pragma pylint: disable=wrong-import-position
 
 """Dict.py
 Author: Jonathan D. Lettvin
@@ -84,6 +85,8 @@ class Dict(dict):
 
 if __name__ == "__main__":
 
+    import sys
+
     def main():
         "Sample run."
 
@@ -91,7 +94,8 @@ if __name__ == "__main__":
         easier = Dict(**harder)
 
         try:
-            assert easier.hello == harder["hello"]
+            assert easier.hello == harder["hello"], 'Test failed'
+            assert len(sys.argv) == 1, 'No command line args permitted'
             print '[PASS] ' + __file__ + ' Sample worked'
         except AssertionError:
             print '[FAIL] ' + __file__ + ' Sample failed'
