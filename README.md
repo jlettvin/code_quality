@@ -108,3 +108,5 @@ It is also useful to have an 'uninstall' and 'clean'.
 Currently "Finalize" is used as "info" is intended.
 [info](https://www.gnu.org/prep/standards/html_node/Standard-Targets.html#Standard-Targets)
 This should be cleaned up.
+
+Latest update has 100% coverage.
