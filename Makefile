@@ -50,6 +50,7 @@ Finalize:
 		$(DICT).py > /dev/null
 	@coverage run --source=$(DICT).py 			 --append \
 		$(DICT).py fail > /dev/null
+	@echo "\tmake .coverage from $(TEST).py using coverage"
 	@coverage html
 	@echo "\tmake pydoc from $(DICT) and $(TEST).py using coverage"
 	@pydoc -w $(DICT) > $(DICT).html
